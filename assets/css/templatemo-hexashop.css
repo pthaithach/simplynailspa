@@ -210,7 +210,7 @@ header
 .background-header {
   border-bottom: none !important;
   background-color: #fff;
-  height: 80px!important;
+  height: 100px!important;
   position: fixed!important;
   top: 0px;
   left: 0px;
@@ -248,7 +248,7 @@ header
 }
 
 .header-area .main-nav {
-  min-height: 80px;
+  min-height: 100px;
   background: transparent;
 }
 
@@ -517,7 +517,7 @@ header
 }
 
 .header-area.header-sticky {
-  min-height: 80px;
+  min-height: 100px;
 }
 
 .header-area .nav {
