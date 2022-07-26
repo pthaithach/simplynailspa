@@ -38,7 +38,27 @@
 
     </head>
     
-    <body>  
+    <body>
+
+    <!--Popup -->
+    <div id="popup-ads" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header pt-0 pb-0 d-none">
+                    <h2 class="modal-title">Promotion</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="w-100" src="assets/images/simply-nails-spa-information.png" alt="">
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -701,8 +721,9 @@
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <!-- Bootstrap -->
-    
+    <!-- Pop up -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     
 
     <!-- Plugins -->
@@ -725,7 +746,15 @@
     <script src="assets/js/custom.js"></script>
 
     <script>
+        $(window).on('load', function() {
+            $('#popup-ads').modal('show');
+        });
 
+        $('#popup-ads').modal({
+            // backdrop: 'static', // Prevent to close on click outside the modal
+            // keyboard: false  // to prevent closing with Esc button (if you want this too)
+        })
+        
         $(function() {
             var selectedClass = "";
             $("p").click(function(){
